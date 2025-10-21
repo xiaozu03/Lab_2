@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab_2_layout.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Image
+                Source="main_page_logo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Tony newly established pet shop" />
+
+            <Label
+                Text="Welcome to Pet Adoption!"
+                Style="{StaticResource Headline}"
+                FontSize = "32"
+                HorizontalOptions="Center"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Find your furry friend a loving home!"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App UI" />
+
+            <Button
+                x:Name="FindYourPetButton"
+                Text="Find Your Pet" 
+                SemanticProperties.Hint="Navigates to the pet listings page"
+                Clicked="OnFindYourPetButtonClicked"
+                HorizontalOptions="Fill"
+                BackgroundColor="#FFD700"
+                TextColor="Black"
+                CornerRadius="25"
+                Padding="20,10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
